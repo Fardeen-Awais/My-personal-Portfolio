@@ -26,10 +26,10 @@ function Hero() {
       <Cursor cursorColor='#6d8f55' />
       </h1>
       <div>
-      <Link href={'#about'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200'>About</button></Link>
-      <Link href={'#experience'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200'>Experience</button></Link>
-      <Link href={'#Skills'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200'>Skills</button></Link>
-      <Link href={'#Project'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 my-2 text-green-200'>Projects</button></Link>
+      <Link href={'#about'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200  hover:bg-green-500'>About</button></Link>
+      <Link href={'#experience'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200 hover:bg-green-500'>Experience</button></Link>
+      <Link href={'#Skills'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 text-green-200 hover:bg-green-500'>Skills</button></Link>
+      <Link href={'#Project'}><button className='px-6 py-2 border border-green-400 rounded-full tracking-widest mx-1 my-2 text-green-200 hover:bg-green-500'>Projects</button></Link>
     </div>
     </div>
     
