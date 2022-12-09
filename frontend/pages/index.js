@@ -2,8 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import About from "../components/about";
 import Experience from "../components/experience";
+import Footer from "../components/footer";
 import Header from "../components/header";
 import Hero from "../components/hero";
+import Project from "../components/project";
+import Skills from "../components/skill";
 // import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -27,10 +30,21 @@ export default function Home() {
       <section id="experience" className="snap-center">
         <Experience/>
       </section>
+
       {/* Skill */}
+      <section id="Skills" className="snap-center">
+        <Skills/>
+      </section>
       {/* Projects */}
+      <section id='Project' className="snap-center">
+      <Project/>
+      </section>
       {/* Contact */}
+
       {/* Footer */}
+      <section >
+        <Footer/>
+        </section>
     </div>
   );
 }
