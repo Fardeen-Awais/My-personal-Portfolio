@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 function Footer() {
   return (
-    <div className="snap-center">
-      <footer className="bg-[#3d642b] ">
+    <div className="snap-center ">
+      <footer className="bg-[#1b7c0551] ">
         <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start flex-wrap border-t-4 border-green-500">
 
         <div className=" bg-opacity-75">
