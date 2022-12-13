@@ -10,7 +10,7 @@ function Header() {
       </div>
       <div className="flex flex-col items-center cursor-pointer ">
       <span><SocialIcon network="email" bgColor="#3d642b" fgColor="#ffffff"/></span>
-        <p className="uppercase hidden md:block text-base pt-1">Get in Touch</p>
+        <p className=" hidden md:block text-base pt-1">DM Me </p>
       </div>
     </header>
     </>
