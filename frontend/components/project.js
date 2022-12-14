@@ -2,6 +2,7 @@ import React from "react";
 import Zoom from 'react-reveal/Zoom';
 function Project() {
   const projects = [1, 2, 3,5 ,6, 7]
+  const key = '1'
   return (
     <div className="h-screen flex flex-col justify-evenly items-center relative mx-auto overflow-hidden md:flex-row">
       <h3 className="absolute top-[80px] text-2xl tracking-widest font-serif uppercase text-green-300">
