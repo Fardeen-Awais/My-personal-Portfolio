@@ -9,7 +9,7 @@ function Project() {
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scroll-smooth  scrollbar-thumb-green-900 scrollbar-track-gray-300">
         {projects.map((projects, i) => (
-          <div key={slug} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+          <div key={key} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
             <Zoom top>
             <img
               src="https://gnnhd.tv/media/38518/netflix.jpeg"
