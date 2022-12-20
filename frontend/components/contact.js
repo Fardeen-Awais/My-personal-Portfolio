@@ -8,11 +8,12 @@ import { green } from "@mui/material/colors";
 function Contact() {
   return (
     <div className="h-screen flex flex-col justify-evenly items-center relative  mx-auto px-6">
-      <h3 className="text-2xl tracking-widest font-serif uppercase text-green-300 ">
+      <div className="space-y-6">
+      <h3 className="flex flex-col justify-center text-center items-center text-2xl tracking-widest font-serif uppercase text-green-300 ">
         Contact
       </h3>
       
-      <div className="space-y-8">
+      
       <div
         className="flex flex-row
     justify-center items-center space-x-5 space-y-2"

@@ -21,7 +21,7 @@ function Hero() {
       height={150}
     /></div>
     <h2 className='text-green-300'>Nextjs | Sanity CMS | SEO </h2>
-      <h1 className='text-4xl font-serif'>
+      <h1 className='text-3xl md:text-4xl font-serif'>
         <span>{text}</span>
       <Cursor cursorColor='#6d8f55' />
       </h1>
