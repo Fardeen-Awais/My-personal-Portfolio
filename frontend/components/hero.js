@@ -4,11 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 function Hero() {
     const [text] = useTypewriter({
-        words: ['My name is Fardeen ', 'I am a full stack developer', 'Get your Buisness in the internet',],
+        words: ['My name is Fardeen ', 'I am a full stack developer', 'Get your Buisness in the internet'],
         delaySpeed: 2000,
-
         loop: Infinity,
-       
       })
   return (
     <div className='flex justify-center space-y-8 overflow-hidden flex-col items-center text-center h-screen'>

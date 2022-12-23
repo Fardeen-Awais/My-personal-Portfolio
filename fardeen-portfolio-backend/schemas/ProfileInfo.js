@@ -33,17 +33,19 @@ export default defineType({
         hotspot: true,
       },
     }),
+    {
+      name: 'socials',
+      type: 'object',
+      fields: [
+        {
+          name:'socials',
+          type: 'reference',
+          to: [{type: 'socials'}]
+        }
+      ]
+    }
   ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
+ 
+ 
 })

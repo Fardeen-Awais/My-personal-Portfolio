@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion"
 function Project() {
   const projects = [1, 2, 3,5 ,6, 7]
   const key = '1'
@@ -12,10 +12,16 @@ function Project() {
         {projects.map((projects, i) => (
           <div key={key} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
           
-            <img
+            <motion.img
+              initial = {{
+                y:-300,
+              }} // It will define the initial position
+              transition={{  type: "spring",  damping: 10, mass: 0.7,  stiffness: 300}} //Duration of the transition
+              whileInView={{y:0 ,rotate:0}} // Enable transition when someone view it
+              //viewport= {{once:true}} // Animate only one time
               src="https://gnnhd.tv/media/38518/netflix.jpeg"
               alt="Picture of the author"
-             className="w-[500px] "
+             className="w-[500px]"
             />
             <div><h4 className="text-2xl font-semibold mx-auto max-w-lg">
               Project: {i+1} <span>Nextflix Clone</span>
