@@ -1,11 +1,21 @@
 import React from 'react'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { createClient } from "next-sanity";
 import Link from 'next/link'
 import Image from 'next/image'
-function Hero() {
+import imageUrlBuilder from "@sanity/image-url";
+function Hero({ProfileInfo}) {
+  const client = createClient({
+    projectId: "o6h5kv64", 
+    dataset: "production",
+    useCdn: false,
+  });
+  const builder = imageUrlBuilder(client);
+  
+  // console.log(name) we get the it into a variable
     const [text] = useTypewriter({
-        words: ['My name is Fardeen ', 'I am a full stack developer', 'Get your Buisness in the internet'],
-        delaySpeed: 2000,
+        words: [`My name is ${ProfileInfo.name} `, `I am a ${ProfileInfo.role}`, 'Get your Website on internet','Developement to Production'],
+        delaySpeed: 1000,
         loop: Infinity,
       })
   return (
@@ -13,12 +23,13 @@ function Hero() {
       <div >
       <Image
       className='relative rounded-full mx-auto'
-      src="/ProfileImage.jpg"
+      src={builder.image(ProfileInfo.profileimage).url()}
+      // "/ProfileImage.jpg"
       alt="Picture of the author"
       width={150}
       height={150}
     /></div>
-    <h2 className='text-green-300'>Nextjs | Sanity CMS | SEO </h2>
+    <h2 className='text-green-300'>{ProfileInfo.topskill1} | {ProfileInfo.TopSkill2} | {ProfileInfo.topskill3} </h2>
       <h1 className='text-3xl md:text-4xl font-serif'>
         <span>{text}</span>
       <Cursor cursorColor='#6d8f55' />

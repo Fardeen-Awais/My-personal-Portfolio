@@ -16,7 +16,7 @@ function Project() {
               initial = {{
                 y:-300,
               }} // It will define the initial position
-              transition={{  type: "spring",  damping: 10, mass: 0.7,  stiffness: 300}} //Duration of the transition
+              transition={{  type: "spring",  damping: 60, mass: 0.7,  stiffness: 300}} //Duration of the transition
               whileInView={{y:0 ,rotate:0}} // Enable transition when someone view it
               //viewport= {{once:true}} // Animate only one time
               src="https://gnnhd.tv/media/38518/netflix.jpeg"
