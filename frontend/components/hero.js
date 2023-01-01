@@ -8,6 +8,7 @@ function Hero({ProfileInfo}) {
   const client = createClient({
     projectId: "o6h5kv64", 
     dataset: "production",
+    apiVersion: "2022-03-25",
     useCdn: false,
   });
   const builder = imageUrlBuilder(client);

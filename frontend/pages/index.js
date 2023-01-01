@@ -7,8 +7,7 @@ import Header from "../components/header";
 import Project from "../components/project";
 import Skills from "../components/skill";
 import Hero from "../components/hero";
-export default function Home({ProfileInfo}) {
-  // console.log(ProfileInfo)
+export default function Home({ProfileInfo ,experience,skills,project}) {
   
   return (
     
@@ -33,16 +32,16 @@ export default function Home({ProfileInfo}) {
       </section>
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <Experience/>
+        <Experience experience={experience} />
       </section>
 
       {/* Skill */}
       <section id="Skills" className="snap-center">
-        <Skills/>
+        <Skills skills={skills}/>
       </section>
       {/* Projects */}
       <section id='Project' className="snap-center">
-      <Project/>
+      <Project project={project}/>
       </section>
       {/* Contact */}
       <section id="contact" className="snap-center">
@@ -63,12 +62,15 @@ export async function getStaticProps() {
   // *[_type == "ProfileInfo"][0] This is the main problem i get undefine in my results
 // Basically we fetch the data in our index.js and after successfull fetch i pass the props into the components
   const ProfileInfo = await client.fetch(`*[_type == "ProfileInfo"][0]`);
-
-
+  const experience = await client.fetch(`*[_type == "experience"]`); // We need to get all experience so it will give all experience in array so as you know map is only used on []
+  const skills = await client.fetch(`*[_type == "skills"]`);
+  const project = await client.fetch(`*[_type == "project"]`);
   return {
     props: {
       ProfileInfo,
-      
+      experience,
+      skills,
+      project
     }
   };
 }

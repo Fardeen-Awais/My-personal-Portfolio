@@ -17,7 +17,11 @@ export default defineType({
       title: 'Progress',
       type: 'string',
     }),
-  
+    defineField({
+      name: 'color',
+      title: 'Color',
+      type: 'string',
+    }),
     defineField({
       name: 'skillimg',
       title: 'Skill picture',

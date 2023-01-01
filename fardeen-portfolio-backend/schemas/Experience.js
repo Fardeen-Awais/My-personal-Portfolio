@@ -19,8 +19,8 @@ export default defineType({
     }),
   
     defineField({
-      name: 'profileimage',
-      title: 'Profile image',
+      name: 'frameworkimg',
+      title: 'Framework image',
       type: 'image',
       options: {
         hotspot: true,

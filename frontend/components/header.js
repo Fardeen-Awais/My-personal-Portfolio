@@ -1,6 +1,6 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-
+import Link from 'next/link'
 function Header() {
   return (
     <>
@@ -8,10 +8,14 @@ function Header() {
       <div className="flex flex-row items-center">
         <p className="text-2xl md:text-3xl font-serif">My Personal Portfolio</p>
       </div>
+     
       <div className="flex flex-col items-center cursor-pointer ">
+        
       <span><SocialIcon network="email" bgColor="#3d642b" fgColor="#ffffff"/></span>
-        <p className=" hidden md:block text-base pt-1">DM Me </p>
+        <p className=" hidden md:block text-base pt-1">DM Me </p> 
       </div>
+     
+     
     </header>
     </>
   );

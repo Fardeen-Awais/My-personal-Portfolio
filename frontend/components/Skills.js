@@ -1,18 +1,25 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import { createClient } from "next-sanity";
+import imageUrlBuilder from "@sanity/image-url";
 
-
-
-function Skill() {
+function Skill({skill}) {
+  const client = createClient({
+    projectId: "o6h5kv64", 
+    dataset: "production",
+    apiVersion: "2022-03-25",
+    useCdn: false,
+  });
   
+  const builder = imageUrlBuilder(client);
   return (
     <div className='flex cursor-pointer group'>
       <motion.img
 
-      className='w-20 h-20 border-white rounded-full border object-cover group-hover:grayscale transition duration-300 ease-in-out' src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_96102ac6497377cd53da621075fe828e/sanity.png" alt="skill img" />
+      className='w-20 h-20 border-white rounded-full border object-cover group-hover:grayscale transition duration-300 ease-in-out' src={builder.image(skill.skillimg).url()} alt="skill img" />
       <div className='absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out group-hover:bg-green-100 w-20 h-20 rounded-full z-0'>
         <div className='flex justify-center items-center h-full '>
-          <p className='percent text-2xl text-black font-semibold'>100%</p>
+          <p className='percent text-2xl text-black font-semibold'>{skill.Progress}</p>
         </div>
       </div>
       
